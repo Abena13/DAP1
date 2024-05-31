@@ -15,5 +15,5 @@ total_sales_products=df[['Product Name','Sales']].groupby('Product Name').agg({'
 total_sales_products['Sales']=round(total_sales_products['Sales'],2)
 # total_sales_products=formatindex(total_sales_products)
 st.dataframe(total_sales_products.head(10))
-fig=px.bar(total_sales_product.head(10),x='Sales',y='Product Name',orientation='h',color='Product Name')
+fig=px.bar(total_sales_product.head(10),y='Product Name',x='Sales',orientation='h',color='Product Name')
 st.plotly_chart(fig,use_container_width=True)
